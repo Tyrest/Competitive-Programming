@@ -36,42 +36,18 @@ void setIO(string s) {
 
 void solve()
 {
-    int n, k, t=0;
-    cin >> n >> k;
-    vi a;
-    a.rsz(n);
-    F0R(i, n)
-    {
-        cin >> a[i];
-        t += a[i];
-    }
-    if (t <= k)
-    {
-        cout << 0 << '\n';
-        return;
-    }
-    sort(all(a));
-    int i = n - 1;
-    int c = 1;
-    int e = 0;
-    int x = 0;
-    int ans = 0;
-    while (t - e + a[0] * (c - 1) - x > k)
-    {
-        if (i > 0 && a[i] - a[0] >= c)
-        {
-            e += a[i];
-            ++c;
-            --i;
-        }
-        else
-        {
-            --a[0];
-            ++x;
-        }
-        ++ans;
-    }
-    cout << ans << '\n';
+    vector<int> vec;
+    vec.resize(3);
+    cin >> vec[0] >> vec[1] >> vec[2];
+    sort(all(vec));
+    if (vec[0] == vec[1] && vec[2] % 2 == 0)
+        cout << "YES\n";
+    else if (vec[1] == vec[2] && vec[0] % 2 == 0)
+        cout << "YES\n";
+    else if (vec[0] + vec[1] == vec[2])
+        cout << "YES\n";
+    else
+        cout << "NO\n";
 }
 
 int main() {
@@ -80,8 +56,12 @@ int main() {
 	#endif
 	// setIO("problem_name"); // Set this to the problem name
     
-    int t;
-    cin >> t;
-    while(t--)
+    int i, j, n, m, x, y;
+
+    cin >> n;
+    while (n > 0)
+    {
+        --n;
         solve();
+    }
 }

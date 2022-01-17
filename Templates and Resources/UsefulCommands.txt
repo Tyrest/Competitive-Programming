@@ -1,2 +1,3 @@
-g++ -std=c++17 -Wshadow -Wall -o main main.cpp -D_GLIBCXX_DEBUG -g
+g++ -std=c++17 -Wshadow -Wall -o main.out main.cpp -D_GLIBCXX_DEBUG -g
 // Compilation Flags to catch errors
+./main.out
