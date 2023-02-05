@@ -8,3 +8,6 @@ Unfortunately, only found USACO at the end of senior year three weeks before the
 ## Results from USACO open 2021
 - In contest promotion to silver for passing all bronze test cases
 - Solved 2/3 silver problems
+
+## Results from ICPC NAQ 23
+![ICPC NAQ Results](./ICPC%20NAQ%2023/ICPCNAQ_Results.png)
